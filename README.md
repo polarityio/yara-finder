@@ -7,15 +7,13 @@ The Polarity Yara finder uses the Google search API to search for publicly avail
 * Fraynhofer.de
 * Loginsoft
 
-| ![image](assets/overlay2.png)
-|---|---|
-|*Yara Finder example* |
+![image](assets/overlay.png)
 
 ## Yara Finder Integration Options
-
 ### API Key
 
 Valid Google CSE API Key
+
 
 ## Installation Instructions
 

@@ -23,9 +23,9 @@ module.exports = {
    * @optional
    */
   description:
-    "YARA Finder uses Google Programmable Search to find public YARA rules on websites such as Github.com",
-    entityTypes: ['email','string','hash','ip','domain','url'],
-    customTypes:[
+    'YARA Finder uses Google Programmable Search to find public YARA rules on websites such as Github.com',
+  entityTypes: ['email', 'string', 'hash', 'ip', 'domain', 'url'],
+  customTypes: [
     {
       key: 'cve',
       regex: /CVE-(1999|2\d{3})-(0\d{2}[1-9]|[1-9]\d{3,})/
