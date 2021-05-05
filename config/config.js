@@ -24,19 +24,15 @@ module.exports = {
    */
   description:
     'YARA Finder uses Google Programmable Search to find public YARA rules on websites such as Github.com',
-  entityTypes: ['email', 'string', 'hash', 'ip', 'domain', 'url'],
+  entityTypes: ['email', 'hash', 'ip', 'domain', 'url', 'cve'],
   customTypes: [
     {
-      key: 'cve',
-      regex: /CVE-(1999|2\d{3})-(0\d{2}[1-9]|[1-9]\d{3,})/
-    },
-    {
       key: 'yf',
-      regex: /yf:.{3,128}/
+      regex: /yf:.{2,2048}/
     },
     {
       key: 'openString',
-      regex: /.{3,128}/
+      regex: /^[\s\S]{2,2048}$/
     }
   ],
   onDemandOnly: true,
@@ -80,7 +76,6 @@ module.exports = {
   logging: {
     level: 'info' //trace, debug, info, warn, error, fatal
   },
-  onDemandOnly: false,
   /**
    * Options that are displayed to the user/admin in the Polarity integration user-interface.  Should be structured
    * as an array of option objects.

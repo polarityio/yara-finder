@@ -48,7 +48,8 @@ function startup(logger) {
 
 function _createQuery(entity, searchFilters) {
   //let query = `"\""${entity.value.replace('exf:','')}"\""`;
-  let query = `"${entity.value.replace('yf:','')}" AND "rule" AND "strings:" AND "condition:"`;
+  entity.value = entity.value.trim();
+  let query = `"${entity.value.replace('yf:','')}" AND "rule" AND "strings:" AND "condition:" AND "YARA"`;
   /*if (query.startsWith('exf:'))
   {
     query = query.replace('exf:','');
