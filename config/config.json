@@ -1,0 +1,57 @@
+{
+  "name": "YARA Finder",
+  "acronym": "YF",
+  "description": "YARA Finder uses Google Programmable Search to find public YARA rules on websites such as Github.com",
+  "entityTypes": [
+    "email",
+    "hash",
+    "domain",
+    "url",
+    "cve"
+  ],
+  "customTypes": [
+    {
+      "key": "yf",
+      "regex": "yf:.{2,2048}"
+    },
+    {
+      "key": "openString",
+      "regex": "^[\\s\\S]{2,2048}$"
+    }
+  ],
+  "onDemandOnly": true,
+  "defaultColor": "light-yellow",
+  "styles": [
+    "./styles/style.less"
+  ],
+  "block": {
+    "component": {
+      "file": "./components/block.js"
+    },
+    "template": {
+      "file": "./templates/block.hbs"
+    }
+  },
+  "request": {
+    "cert": "",
+    "key": "",
+    "passphrase": "",
+    "ca": "",
+    "proxy": "",
+    "rejectUnauthorized": true
+  },
+  "logging": {
+    "level": "info"
+  },
+  "options": [
+    {
+      "key": "apiKey",
+      "name": "API Key",
+      "description": "Valid Google CSE API Key",
+      "default": "",
+      "type": "password",
+      "userCanEdit": false,
+      "adminOnly": true
+    }
+  ]
+}
