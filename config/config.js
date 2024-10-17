@@ -24,7 +24,7 @@ module.exports = {
    */
   description:
     'YARA Finder uses Google Programmable Search to find public YARA rules on websites such as Github.com',
-  entityTypes: ['email', 'hash', 'ip', 'domain', 'url', 'cve'],
+  entityTypes: ['email', 'MD5', 'SHA1', 'SHA256', 'IPv4', 'IPv6', 'domain', 'url', 'cve'],
   customTypes: [
     {
       key: 'yf',
@@ -69,7 +69,7 @@ module.exports = {
     ca: '',
     // An HTTP proxy to be used. Supports proxy Auth with Basic Auth, identical to support for
     // the url parameter (by embedding the auth info in the uri)
-    proxy: ""
+    proxy: ''
   },
   logging: {
     level: 'info' //trace, debug, info, warn, error, fatal
