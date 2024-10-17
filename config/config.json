@@ -3,7 +3,7 @@
   "name": "YARA Finder",
   "acronym": "YF",
   "description": "YARA Finder uses Google Programmable Search to find public YARA rules on websites such as Github.com",
-  "entityTypes": ["email", "MD5", "SHA1", "SHA256", "domain", "url", "cve"],
+  "entityTypes": ["email", "MD5", "SHA1", "SHA256", "IPv4", "IPv6", "domain", "url", "cve"],
   "customTypes": [
     {
       "key": "yf",
